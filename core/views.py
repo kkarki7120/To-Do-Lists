@@ -22,3 +22,4 @@ def tasks(request):
     Task = List.objects.all()
     context = {'tasks': Task}
     return render(request, 'tasks.html', context)
+
