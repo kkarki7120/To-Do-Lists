@@ -1,0 +1,42 @@
+ {% extends 'base.html' %}
+
+{% block title %}
+Home-To-Do Lists
+{% endblock %}
+
+{% block body %}
+<h1 class="text-center" >
+<style> .text-center{
+margin-top:20px; 
+   
+}
+</style>Welcome to TO-DO Lists</h1>
+{% if success %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success: </strong>   {{ tsktitle }} is  added to your Task lists.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+{% endif %}
+
+<form action= "/" method ="POST" class="input-box">
+    {% csrf_token %}
+  <style>
+      .input-box{
+        margin-top: 50px;  
+      }
+  </style>  
+ <div class="title-text">
+        <p> Add a Task <p/>
+  </div>
+ <div class="mb-3">
+    <label for="tsktitle" class="form-label ">Title:</label>
+    <input class="form-control" type="text" placeholder="title"  name="tsktitle" > 
+</div>
+<div class="mb-3">
+  <label for="descriptions" class="form-label">Descriptions:</label>
+  <textarea class="form-control" id="descriptions" placeholder="descriptions" rows="3" name="descriptions" ></textarea>
+</div>
+<button type="submit" class="btn btn-dark">Add</button>
+</form>  
+
+{% endblock %}

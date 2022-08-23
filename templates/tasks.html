@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Your To-Do Lists
+
+{% endblock %}
+
+{% block body %}
+<h1 class="text-center" >
+    <style> .text-center{
+    margin-top:20px; 
+       
+    }
+     </style>Your Tasks</h1>
+<div class="task"> 
+    <style>
+        .task{
+            width:800px;
+            margin:auto;
+            margin-top:20px;
+        }
+    </style>   
+ <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">S.N</th>
+            <th scope="col">Task Title</th>
+            <th scope="col">Task Decription</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+            {% for task in tasks  %}
+            
+          <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{ task.title }}</td>
+            <td>{{ task.description }}</td>
+            
+          </tr>
+               {% endfor %}
+
+        </tbody>
+        
+      </table>  
+      <button type="submit" class="btn btn-primary "><a href ="/" class="text-white" > Add Task </a></button>  
+</div>      
+{% endblock %}

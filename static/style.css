@@ -1,0 +1,24 @@
+
+
+.input-box{
+    width: 500px;
+    margin: auto;
+    margin-top: 50px;
+    border: 1px solid black;
+    padding: 30px;
+    background-color: rgb(84, 143, 84);
+}
+
+.title-text{
+    width: 90px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid grey;
+    background-color: rgb(46, 167, 66);
+    margin: auto;
+    border-radius: 10px;
+    margin-bottom: 60px;
+    
+}
+
+
